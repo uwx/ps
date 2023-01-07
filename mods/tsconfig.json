@@ -1,5 +1,5 @@
 {
-  "extends": "../tsconfig.json",
+  "extends": "../tsconfig-base.json",
   "compilerOptions": {
     "allowJs": true,
     "allowUnusedLabels": false,
@@ -8,7 +8,9 @@
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": false,
     "noImplicitReturns": false,
-    "tsBuildInfoFile": ".tsbuildinfo"
+    "tsBuildInfoFile": ".tsbuildinfo",
+    "rootDir": "./src",
+    "outDir": "build",
   },
   "include": ["src"]
 }

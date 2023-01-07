@@ -1,12 +1,15 @@
 {
-  "extends": "../tsconfig.json",
+  "extends": "../tsconfig-base.json",
   "compilerOptions": {
     "tsBuildInfoFile": ".tsbuildinfo",
     "baseUrl": ".",
     "paths": {
       "@smogon/calc/*": ["node_modules/@smogon/calc/dist/*"],
       "@pkmn/mods/*": ["node_modules/@pkmn/mods/build/*"]
-    }
+    },
+
+    "rootDir": "./",
+    "outDir": "build",
   },
   "files": ["index.ts", "index.test.ts"]
 }

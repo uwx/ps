@@ -1,7 +1,9 @@
 {
-  "extends": "../tsconfig.json",
+  "extends": "../tsconfig-base.json",
   "compilerOptions": {
     "tsBuildInfoFile": ".tsbuildinfo",
+    "rootDir": ".",
+    "outDir": "build",
   },
   "files": ["index.ts", "index.test.ts"]
 }

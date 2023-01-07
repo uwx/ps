@@ -2,7 +2,10 @@
   "extends": "../tsconfig-base.json",
   "compilerOptions": {
     "noImplicitReturns": false,
-    "tsBuildInfoFile": ".tsbuildinfo"
+    "tsBuildInfoFile": ".tsbuildinfo",
+    
+    "rootDir": ".",
+    "outDir": "build",
   },
   "files": ["index.ts"]
 }
