@@ -62,7 +62,7 @@ const tree = root => {
     try {
       fs.writeFileSync(cjs, JSON.stringify(mkconfig(tsconfig, 'cjs')));
       running('tsc -p tsconfig.cjs.json');
-      sh('npx', ['tsc', '-p', 'tsconfig.cjs.json']);
+      sh('npx.cmd', ['tsc', '-p', 'tsconfig.cjs.json']);
     } finally {
       try { fs.unlinkSync(cjs); } catch {}
     }
@@ -71,7 +71,7 @@ const tree = root => {
       try {
         fs.writeFileSync(esm, JSON.stringify(mkconfig(tsconfig, 'esm')));
         running('tsc -p tsconfig.esm.json');
-        sh('npx', ['tsc', '-p', 'tsconfig.esm.json']);
+        sh('npx.cmd', ['tsc', '-p', 'tsconfig.esm.json']);
       } finally {
         try { fs.unlinkSync(esm); } catch {}
       }

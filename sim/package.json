@@ -11,9 +11,8 @@
   ],
   "license": "MIT",
   "sideEffects": false,
-  "main": "build/cjs/sim/index.js",
-  "module": "build/esm/sim/index.mjs",
-  "types": "build/types/sim/index.d.ts",
+  "main": "build/sim/index.js",
+  "types": "build/sim/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -21,8 +20,8 @@
     "build"
   ],
   "dependencies": {
-    "@pkmn/sets": "^5.0.3",
-    "@pkmn/streams": "^1.1.0"
+    "@pkmn/sets": "file:../sets",
+    "@pkmn/streams": "file:../streams"
   },
   "devDependencies": {
     "mocha": "^10.2.0"

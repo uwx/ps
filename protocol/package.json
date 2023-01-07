@@ -6,7 +6,6 @@
   "license": "MIT",
   "sideEffects": false,
   "main": "build/index.js",
-  "module": "build/index.mjs",
   "types": "build/index.d.ts",
   "unpkg": "build/index.min.js",
   "exports": {
@@ -37,11 +36,11 @@
     "build"
   ],
   "dependencies": {
-    "@pkmn/types": "^3.0.0"
+    "@pkmn/types": "file:../types"
   },
   "devDependencies": {
-    "@pkmn/dex": "^0.7.13",
-    "@pkmn/data": "^0.7.13"
+    "@pkmn/dex": "file:../dex",
+    "@pkmn/data": "file:../data"
   },
   "scripts": {
     "lint": "eslint --cache src --ext ts",

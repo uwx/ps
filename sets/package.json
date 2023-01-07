@@ -6,7 +6,6 @@
   "license": "MIT",
   "sideEffects": false,
   "main": "build/index.js",
-  "module": "build/index.mjs",
   "types": "build/index.d.ts",
   "unpkg": "build/index.min.js",
   "publishConfig": {
@@ -16,7 +15,7 @@
     "build"
   ],
   "dependencies": {
-    "@pkmn/types": "^3.0.0"
+    "@pkmn/types": "file:../types"
   },
   "scripts": {
     "lint": "eslint --cache src --ext ts",

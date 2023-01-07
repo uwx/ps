@@ -6,7 +6,6 @@
   "license": "MIT",
   "sideEffects": false,
   "main": "build/index.js",
-  "module": "build/index.mjs",
   "types": "build/index.d.ts",
   "unpkg": "build/index.min.js",
   "publishConfig": {
@@ -16,12 +15,12 @@
     "build"
   ],
   "dependencies": {
-    "@pkmn/dex-types": "^0.7.13"
+    "@pkmn/dex-types": "file:../dex/types"
   },
   "devDependencies": {
-    "@pkmn/dex": "^0.7.13",
-    "@pkmn/mods": "^0.7.13",
-    "@pkmn/sim": "^0.7.13",
+    "@pkmn/dex": "file:../dex",
+    "@pkmn/mods": "file:../mods",
+    "@pkmn/sim": "file:../sim",
     "@smogon/calc": "^0.7.0"
   },
   "scripts": {

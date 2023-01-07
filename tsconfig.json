@@ -1,19 +1,21 @@
 {
-  "compilerOptions": {
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "declaration": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "incremental": true,
-    "lib": ["es2016", "dom"],
-    "module": "commonjs",
-    "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "sourceMap": true,
-    "strict": true,
-    "target": "es2018",
-    "tsBuildInfoFile": ".tsbuildinfo"
-  }
+    "files": [],
+    "include": [],
+    "references": [
+      { "path": "./client" },
+      { "path": "./data" },
+      { "path": "./dex" },
+      { "path": "./dex/types" },
+      { "path": "./img" },
+      { "path": "./integration" },
+      { "path": "./login" },
+      { "path": "./mods" },
+      { "path": "./protocol" },
+      { "path": "./randoms" },
+      { "path": "./sets" },
+      { "path": "./sim" },
+      { "path": "./streams" },
+      { "path": "./types" },
+      { "path": "./view" }
+    ]
 }

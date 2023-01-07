@@ -6,7 +6,6 @@
   "license": "MIT",
   "sideEffects": false,
   "main": "build/index.js",
-  "module": "build/index.mjs",
   "types": "build/index.d.ts",
   "publishConfig": {
     "access": "public"
@@ -15,11 +14,11 @@
     "build"
   ],
   "dependencies": {
-    "@pkmn/data": "^0.7.13",
-    "@pkmn/protocol": "^0.6.8"
+    "@pkmn/data": "file:../data",
+    "@pkmn/protocol": "file:../protocol"
   },
   "devDependencies": {
-    "@pkmn/dex": "^0.7.13"
+    "@pkmn/dex": "file:../dex"
   },
   "scripts": {
     "lint": "eslint --cache src --ext ts",

@@ -6,7 +6,6 @@
   "license": "MIT",
   "sideEffects": false,
   "main": "build/index.js",
-  "module": "build/index.mjs",
   "types": "build/index.d.ts",
   "bin": {
     "format-battle": "./format-battle"
@@ -18,8 +17,8 @@
     "build"
   ],
   "dependencies": {
-    "@pkmn/protocol": "^0.6.8",
-    "@pkmn/types": "^3.0.0"
+    "@pkmn/protocol": "file:../protocol",
+    "@pkmn/types": "file:../types"
   },
   "scripts": {
     "lint": "eslint --cache src --ext ts",

@@ -11,7 +11,6 @@
   "license": "MIT",
   "sideEffects": false,
   "main": "build/index.js",
-  "module": "build/index.mjs",
   "types": "build/index.d.ts",
   "exports": {
     ".": {
@@ -100,11 +99,11 @@
     "build"
   ],
   "dependencies": {
-    "@pkmn/dex-types": "^0.7.13"
+    "@pkmn/dex-types": "file:../dex/types"
   },
   "devDependencies": {
-    "@pkmn/dex": "^0.7.13",
-    "@pkmn/sim": "^0.7.13"
+    "@pkmn/dex": "file:../dex",
+    "@pkmn/sim": "file:../sim"
   },
   "scripts": {
     "lint": "eslint --cache src --ext ts",

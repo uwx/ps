@@ -6,7 +6,6 @@
   "license": "MIT",
   "sideEffects": false,
   "main": "build/index.js",
-  "module": "build/index.mjs",
   "types": "build/index.d.ts",
   "publishConfig": {
     "access": "public"
@@ -15,7 +14,7 @@
     "build"
   ],
   "dependencies": {
-    "@pkmn/sim": "^0.7.13"
+    "@pkmn/sim": "file:../sim"
   },
   "scripts": {
     "lint": "eslint --cache src --ext ts",
