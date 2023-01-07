@@ -37,8 +37,7 @@
     "start": "parcel index.html",
     "test": "jest",
     "pretest": "npm run compile",
-    "posttest": "npm run lint",
-    "postinstall": "npm -C ../vendor/pokemon-showdown install && npm -C ../vendor/pokemon-showdown-client install"
+    "posttest": "npm run lint"
   },
   "jest": {
     "preset": "ts-jest",

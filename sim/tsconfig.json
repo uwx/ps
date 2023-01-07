@@ -15,5 +15,9 @@
     "rootDir": ".",
     "outDir": "build",
   },
-  "exclude": ["test", "build"]
+  "exclude": ["test", "build"],
+  "references": [
+    { "path": "../sets" },
+    { "path": "../streams" },
+  ]
 }

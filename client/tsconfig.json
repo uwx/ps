@@ -8,5 +8,8 @@
     "rootDir": "./src",
     "outDir": "build",
   },
-  "exclude": ["build"]
+  "references": [
+    { "path": "../data" },
+    { "path": "../protocol" },
+  ]
 }

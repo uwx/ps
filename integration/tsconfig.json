@@ -5,5 +5,15 @@
     "tsBuildInfoFile": ".tsbuildinfo",
     "rootDir": "./src",
     "outDir": "build",
-  }
+  },
+  "references": [
+    { "path": "../client" },
+    { "path": "../data" },
+    { "path": "../img" },
+    { "path": "../protocol" },
+    { "path": "../randoms" },
+    { "path": "../sets" },
+    { "path": "../sim" },
+    { "path": "../view" },
+  ]
 }

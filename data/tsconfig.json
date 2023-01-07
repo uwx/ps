@@ -11,5 +11,10 @@
     "rootDir": "./",
     "outDir": "build",
   },
-  "files": ["index.ts", "index.test.ts"]
+  "files": ["index.ts", "index.test.ts"],
+  "references": [
+    { "path": "../dex" },
+    { "path": "../mods" },
+    { "path": "../sim" },
+  ]
 }
