@@ -39,7 +39,7 @@ import {toID} from './dex';
 
 /** A single action that can be chosen. */
 export interface ChosenAction {
-	choice: 'move' | 'switch' | 'instaswitch' | 'revivalblessing' | 'team' | 'shift' | 'pass'; 	// action type
+	choice: 'move' | 'switch' | 'instaswitch' | 'revivalblessing' | 'team' | 'shift' | 'pass' | 'useBagItem'; 	// action type
 	pokemon?: Pokemon; // the pokemon doing the action
 	targetLoc?: number; // relative location of the target to pokemon (move action only)
 	moveid: string; // a move to use (move action only)
@@ -52,6 +52,7 @@ export interface ChosenAction {
 	maxMove?: string; // if dynamaxed, the name of the max move
 	terastallize?: string; // if terastallizing, tera type
 	priority?: number; // priority of the action
+	bagitemid?: string; // if using bag item, the item
 }
 
 /** What the player has chosen to happen. */
@@ -67,6 +68,7 @@ export interface Choice {
 	ultra: boolean; // true if an ultra burst has already been selected
 	dynamax: boolean; // true if a dynamax has already been selected
 	terastallize: boolean; // true if a terastallization has already been inputted
+	hasUsedItem: boolean; // true if an item is set to be used this turn
 }
 
 export class Side {
@@ -169,6 +171,7 @@ export class Side {
 			ultra: false,
 			dynamax: false,
 			terastallize: false,
+			hasUsedItem: false,
 		};
 
 		// old-gens
@@ -217,6 +220,8 @@ export class Side {
 				return `switch ${action.target!.position + 1}`;
 			case 'team':
 				return `team ${action.pokemon!.position + 1}`;
+			case 'useBagItem':
+				return `useBagItem ${action.bagitemid} on ${action.pokemon!.position + 1}`;
 			default:
 				return action.choice;
 			}
@@ -412,6 +417,8 @@ export class Side {
 			return this.choice.actions.length >= this.pickedTeamSize();
 		}
 
+		if (this.choice.hasUsedItem) return true;
+
 		// current request is move/switch
 		this.getChoiceIndex(); // auto-pass
 		return this.choice.actions.length >= this.active.length;
@@ -424,6 +431,9 @@ export class Side {
 	) {
 		if (this.requestState !== 'move') {
 			return this.emitChoiceError(`Can't move: You need a ${this.requestState} response`);
+		}
+		if (this.choice.hasUsedItem) {
+			return this.emitChoiceError(`Can't move: You've used a bag item.`);
 		}
 		const index = this.getChoiceIndex();
 		if (index >= this.active.length) {
@@ -784,6 +794,47 @@ export class Side {
 
 		return true;
 	}
+	
+	chooseUseBagItem(data: string) {
+		if (this.requestState !== 'move') {
+			return this.emitChoiceError(`Can't use a bag item: You're not in a Move phase`);
+		}
+		if (this.choice.hasUsedItem) {
+			return this.emitChoiceError(`Can't use a bag item: You've already used one this turn`);
+		}
+		if (this.choice.actions.length > 0) {
+			return this.emitChoiceError(`Can't use a bag item: Using an item must be the only choice per side`);
+		}
+
+		const [itemId, target] = data.split(' on ');
+		
+		let slot = parseInt(target) - 1;
+		if (isNaN(slot) || slot < 0) {
+			// maybe it's a name/species id!
+			slot = -1;
+			for (const [i, mon] of this.pokemon.entries()) {
+				if (target!.toLowerCase() === mon.name.toLowerCase() || toID(target) === mon.species.id) {
+					slot = i;
+					break;
+				}
+			}
+			if (slot < 0) {
+				return this.emitChoiceError(`Can't use a bag item: You do not have a Pokémon named "${target}" to use the item on`);
+			}
+		}
+		if (slot >= this.pokemon.length) {
+			return this.emitChoiceError(`Can't use a bag item: You do not have a Pokémon in slot ${slot + 1} to use the item on`);
+		}
+		const targetPokemon = this.pokemon[slot];
+		
+		this.choice.actions.push({
+			choice: 'useBagItem',
+			bagitemid: itemId,
+			target: targetPokemon,
+		} as ChosenAction);
+
+		return true;
+	}
 
 	/**
 	 * The number of pokemon you must choose in Team Preview.
@@ -918,6 +969,7 @@ export class Side {
 			ultra: false,
 			dynamax: false,
 			terastallize: false,
+			hasUsedItem: false,
 		};
 	}
 
@@ -1013,6 +1065,9 @@ export class Side {
 			case 'skip':
 				if (data) return this.emitChoiceError(`Unrecognized data after "pass": ${data}`);
 				if (!this.choosePass()) return false;
+				break;
+			case 'useBagItem':
+				if (!this.chooseUseBagItem(data)) return false;
 				break;
 			case 'auto':
 			case 'default':

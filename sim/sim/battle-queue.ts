@@ -176,6 +176,8 @@ export class BattleQueue {
 				beforeTurnMove: 5,
 				revivalblessing: 6,
 
+				useBagItem: 5,
+
 				runUnnerve: 100,
 				runSwitch: 101,
 				runPrimal: 102,
