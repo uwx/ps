@@ -1,5 +1,5 @@
 {
-    "extends": "../../tsconfig.json",
+    // "extends": "../../tsconfig.json",
     "compilerOptions": {
         "allowUnreachableCode": false,
         "allowUnusedLabels": false,
@@ -7,9 +7,9 @@
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "incremental": true,
+        "composite": true,
         "lib": ["es2016", "dom"],
         "module": "commonjs",
-        "noEmit": true,
         "noFallthroughCasesInSwitch": true,
         "noImplicitReturns": true,
         "sourceMap": true,
