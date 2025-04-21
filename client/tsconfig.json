@@ -12,5 +12,6 @@
     { "path": "../data" },
     { "path": "../protocol" },
     { "path": "../dex" },
+    { "path": "../dex/types" },
   ]
 }

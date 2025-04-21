@@ -12,3 +12,5 @@ dist/
 .parcel-cache
 tsconfig.cjs.json
 tsconfig.esm.json
+
+out

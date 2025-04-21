@@ -4,6 +4,7 @@
     "outDir": "out",
     "tsBuildInfoFile": ".tsbuildinfo"
   },
+  "include": ["src"],
   "exclude": ["build"],
   "references": [
     { "path": "../types" },

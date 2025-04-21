@@ -2,9 +2,9 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "out",
-    "incremental": false,
-    "tsBuildInfoFile": null
+    "tsBuildInfoFile": ".tsbuildinfo"
   },
+  "files": ["index.d.ts"],
   "references": [
     { "path": "../../types" },
   ]
