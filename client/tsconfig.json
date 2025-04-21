@@ -1,9 +1,16 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
+    "outDir": "out",
     "noFallthroughCasesInSwitch": false,
     "tsBuildInfoFile": ".tsbuildinfo",
     "lib": ["es6", "es2016.array.include", "es2017.object"]
   },
-  "exclude": ["build"]
+  "exclude": ["build"],
+  "include": ["src"],
+  "references": [
+    { "path": "../data" },
+    { "path": "../protocol" },
+    { "path": "../dex" },
+  ]
 }

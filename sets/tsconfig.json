@@ -1,7 +1,11 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
+    "outDir": "out",
     "tsBuildInfoFile": ".tsbuildinfo"
   },
-  "exclude": ["build"]
+  "exclude": ["build"],
+  "references": [
+    { "path": "../types" },
+  ]
 }

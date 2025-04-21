@@ -1,9 +1,14 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
+    "outDir": "out",
     "resolveJsonModule": true,
     "tsBuildInfoFile": ".tsbuildinfo",
     "lib": ["es6", "es2016.array.include", "es2017.object"]
   },
-  "exclude": ["build"]
+  "exclude": ["build"],
+  "references": [
+    { "path": "../protocol" },
+    { "path": "../types" },
+  ]
 }
