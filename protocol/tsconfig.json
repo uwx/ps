@@ -5,7 +5,6 @@
     "tsBuildInfoFile": ".tsbuildinfo"
   },
   "exclude": ["build"],
-  "include": ["src"],
   "references": [
     { "path": "../types" },
     { "path": "../data" },

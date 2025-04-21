@@ -6,7 +6,6 @@
     "tsBuildInfoFile": ".tsbuildinfo",
     "lib": ["es6", "es2016.array.include", "es2017.object"]
   },
-  "include": ["src"],
   "exclude": ["build"],
   "references": [
     { "path": "../protocol" },
