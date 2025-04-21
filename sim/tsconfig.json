@@ -1,7 +1,6 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "outDir": "out",
     "allowJs": true,
     "allowUnusedLabels": false,
     "checkJs": true,
@@ -14,9 +13,5 @@
     "noImplicitReturns": false,
     "tsBuildInfoFile": ".tsbuildinfo"
   },
-  "exclude": ["eslint.config.mjs", "test", "build"],
-  "references": [
-    { "path": "../sets" },
-    { "path": "../streams" },
-  ]
+  "exclude": ["eslint.config.mjs", "test", "build"]
 }

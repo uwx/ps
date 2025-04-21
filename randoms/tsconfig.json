@@ -1,7 +1,6 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "outDir": "out",
     "allowUnusedLabels": false,
     "lib": ["es2015", "es2016.array.include", "es2017.object"],
     "moduleResolution": "node",
@@ -10,8 +9,5 @@
     "resolveJsonModule": true,
     "tsBuildInfoFile": ".tsbuildinfo"
   },
-  "include": ["src"],
-  "references": [
-    { "path": "../sim" },
-  ]
+  "include": ["src"]
 }

@@ -1,19 +1,12 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "outDir": "out",
     "tsBuildInfoFile": ".tsbuildinfo",
     "baseUrl": ".",
     "paths": {
       "@smogon/calc/*": ["node_modules/@smogon/calc/dist/*"],
-      // "@pkmn/mods/*": ["node_modules/@pkmn/mods/build/*"]
+      "@pkmn/mods/*": ["node_modules/@pkmn/mods/build/*"]
     }
   },
-  "files": ["index.ts", "index.test.ts"],
-  "references": [
-    { "path": "../dex" },
-    { "path": "../sim" },
-    { "path": "../dex/types" },
-    { "path": "../mods" },
-  ]
+  "files": ["index.ts", "index.test.ts"]
 }

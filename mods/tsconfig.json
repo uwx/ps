@@ -1,7 +1,6 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "outDir": "out",
     "allowJs": true,
     "allowUnusedLabels": false,
     "checkJs": true,
@@ -11,10 +10,5 @@
     "noImplicitReturns": false,
     "tsBuildInfoFile": ".tsbuildinfo"
   },
-  "include": ["src"],
-  "references": [
-    { "path": "../dex" },
-    { "path": "../sim" },
-    { "path": "../dex/types" },
-  ]
+  "include": ["src"]
 }
