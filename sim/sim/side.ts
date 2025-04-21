@@ -114,7 +114,11 @@ export interface PokemonMoveRequestData {
 	canMegaEvoX?: boolean;
 	canMegaEvoY?: boolean;
 	canUltraBurst?: boolean;
-	canZMove?: AnyObject | null;
+	canZMove?: {
+		move: string;
+		target?: string;
+		disabled?: boolean;
+	}[] | null;
 	canDynamax?: boolean;
 	maxMoves?: DynamaxOptions;
 	canTerastallize?: string;

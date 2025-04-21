@@ -17,7 +17,7 @@ export {
 export {Pokemon} from './pokemon';
 export {PRNG} from './prng';
 export {RandomPlayerAI} from './tools/random-player-ai';
-export {Side} from './side';
+export {Side, ChoiceRequest, MoveRequest, SwitchRequest, TeamPreviewRequest, WaitRequest, PokemonSwitchRequestData} from './side';
 export {Teams} from './teams';
 export {TeamValidator} from './team-validator';
 export {Tags} from '../data/tags';

@@ -384,9 +384,13 @@ export namespace Protocol {
       moves: Array<{
         name: 'Recharge';
         id: 'recharge';
+        disabled?: undefined;
+        target?: undefined;
       } | {
         name: MoveName;
         id: ID;
+        disabled?: undefined;
+        target?: undefined;
       } | {
         name: MoveName;
         id: ID;
