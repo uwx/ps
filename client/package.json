@@ -14,13 +14,6 @@
   "files": [
     "build"
   ],
-  "dependencies": {
-    "@pkmn/data": "^0.9.33",
-    "@pkmn/protocol": "^0.6.32"
-  },
-  "devDependencies": {
-    "@pkmn/dex": "^0.9.33"
-  },
   "scripts": {
     "lint": "eslint --cache src",
     "fix": "eslint --fix src",

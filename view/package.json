@@ -18,8 +18,6 @@
     "build"
   ],
   "dependencies": {
-    "@pkmn/protocol": "^0.6.32",
-    "@pkmn/types": "^4.0.0"
   },
   "scripts": {
     "lint": "eslint --cache src",

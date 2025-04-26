@@ -16,7 +16,6 @@
     "build"
   ],
   "dependencies": {
-    "@pkmn/dex-types": "^0.9.33"
   },
   "scripts": {
     "lint": "eslint --cache *.ts",

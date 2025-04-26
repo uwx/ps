@@ -16,6 +16,23 @@
         "strict": true,
         "target": "es2018",
         "tsBuildInfoFile": ".tsbuildinfo",
-        "verbatimModuleSyntax": false
+        "verbatimModuleSyntax": false,
+        "paths": {
+            "@pkmn/client": ["./client/src/index.ts"],
+            "@pkmn/data": ["./data/index.ts"],
+            "@pkmn/dex": ["./dex/index.ts"],
+            "@pkmn/dex-types": ["./dex/types/index.d.ts"],
+            "@pkmn/img": ["./img/src/index.ts"],
+            "@pkmn/integration": ["./integration/src/index.ts"],
+            "@pkmn/login": ["./login/index.ts"],
+            "@pkmn/mods": ["./mods/src/index.ts"],
+            "@pkmn/protocol": ["./protocol/src/index.ts"],
+            "@pkmn/randoms": ["./randoms/src/index.ts"],
+            "@pkmn/sets": ["./sets/src/index.ts"],
+            "@pkmn/sim": ["./sim/sim/index.ts"],
+            "@pkmn/streams": ["./streams/index.ts"],
+            "@pkmn/types": ["./types/index.d.ts"],
+            "@pkmn/view": ["./view/src/index.ts"],
+        }
     }
 }

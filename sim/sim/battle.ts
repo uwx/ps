@@ -3020,7 +3020,8 @@ export class Battle {
 		this.turnLoop();
 
 		// workaround for tests
-		if (this.log.length - this.sentLogPos > 500) this.sendUpdates();
+		//if (this.log.length - this.sentLogPos > 500) 
+		this.sendUpdates();
 	}
 
 	undoChoice(sideid: SideID) {

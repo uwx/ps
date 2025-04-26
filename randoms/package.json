@@ -14,9 +14,6 @@
   "files": [
     "build"
   ],
-  "dependencies": {
-    "@pkmn/sim": "^0.9.33"
-  },
   "scripts": {
     "lint": "eslint --cache src",
     "fix": "eslint --fix src",

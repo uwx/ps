@@ -15,9 +15,6 @@
   "files": [
     "build"
   ],
-  "dependencies": {
-    "@pkmn/types": "^4.0.0"
-  },
   "scripts": {
     "lint": "eslint --cache src",
     "fix": "eslint --fix src",
