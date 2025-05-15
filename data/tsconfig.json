@@ -8,5 +8,8 @@
       "@pkmn/mods/*": ["node_modules/@pkmn/mods/build/*"]
     }
   },
-  "files": ["index.ts", "index.test.ts"]
+  "files": ["index.ts", "index.test.ts"],
+  "references": [
+    { "path": "../dex/types" },
+  ]
 }

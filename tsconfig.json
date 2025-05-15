@@ -33,6 +33,11 @@
             "@pkmn/streams": ["./streams/index.ts"],
             "@pkmn/types": ["./types/index.d.ts"],
             "@pkmn/view": ["./view/src/index.ts"],
-        }
-    }
+        },
+        "disableSolutionSearching": true,
+        "noEmit": true
+    },
+    "files": [],
+    // "include": ["**/*.ts"],
+    // "exclude": ["node_modules", "build", "vendor", "**/out/**", "**/*.test.ts"]
 }

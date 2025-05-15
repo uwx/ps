@@ -3,5 +3,16 @@
   "compilerOptions": {
     "lib": ["dom", "es6", "es2016.array.include", "es2017.object"],
     "tsBuildInfoFile": ".tsbuildinfo"
-  }
+  },
+  "include": ["src/**/*.ts"],
+  "references": [
+    { "path": "../client" },
+    { "path": "../data" },
+    { "path": "../img" },
+    { "path": "../protocol" },
+    { "path": "../randoms" },
+    { "path": "../sets" },
+    { "path": "../sim" },
+    { "path": "../view" },
+  ]
 }

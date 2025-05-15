@@ -10,5 +10,8 @@
     "noImplicitReturns": false,
     "tsBuildInfoFile": ".tsbuildinfo"
   },
-  "include": ["src"]
+  "include": ["src/**/*.ts"],
+  "references": [
+    { "path": "../dex/types" },
+  ]
 }

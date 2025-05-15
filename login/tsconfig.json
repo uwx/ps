@@ -3,5 +3,5 @@
   "compilerOptions": {
     "tsBuildInfoFile": ".tsbuildinfo",
   },
-  "files": ["index.ts", "index.test.ts"]
+  "files": ["index.ts", "index.test.ts"],
 }

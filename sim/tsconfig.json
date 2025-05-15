@@ -13,5 +13,10 @@
     "noImplicitReturns": false,
     "tsBuildInfoFile": ".tsbuildinfo"
   },
-  "exclude": ["eslint.config.mjs", "test", "build"]
+  "references": [
+    { "path": "../sets" },
+    { "path": "../streams" },
+  ],
+  "exclude": ["eslint.config.mjs", "test", "build"],
+  "include": ["src/**/*.ts"],
 }

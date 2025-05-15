@@ -3,5 +3,9 @@
   "compilerOptions": {
     "tsBuildInfoFile": ".tsbuildinfo"
   },
-  "exclude": ["build"]
+  "exclude": ["build"],
+  "include": ["src/**/*.ts"],
+  "references": [
+    { "path": "../types" },
+  ]
 }

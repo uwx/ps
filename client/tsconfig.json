@@ -5,5 +5,10 @@
     "tsBuildInfoFile": ".tsbuildinfo",
     "lib": ["es6", "es2016.array.include", "es2017.object"]
   },
-  "exclude": ["build"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["build"],
+  "references": [
+    { "path": "../data" },
+    { "path": "../protocol" },
+  ]
 }
