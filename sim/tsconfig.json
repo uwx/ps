@@ -18,5 +18,5 @@
     { "path": "../streams" },
   ],
   "exclude": ["eslint.config.mjs", "test", "build"],
-  "include": ["src/**/*.ts", "data/**/*.ts", "config/**/*.ts", "lib/**/*.ts"]
+  "include": ["data/**/*.ts", "config/**/*.ts", "lib/**/*.ts", "sim/**/*.ts"]
 }
