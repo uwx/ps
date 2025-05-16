@@ -1,8 +1,8 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "incremental": false,
-    "tsBuildInfoFile": null
+    "incremental": true,
+    "tsBuildInfoFile": ".tsbuildinfo"
   },
   "files": ["index.d.ts"]
 }
