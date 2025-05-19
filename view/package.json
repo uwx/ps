@@ -1,6 +1,6 @@
 {
   "name": "@pkmn/view",
-  "version": "0.6.32",
+  "version": "0.6.33",
   "description": "Library for building Pokémon Showdown client UIs",
   "repository": "github:pkmn/ps",
   "license": "MIT",
